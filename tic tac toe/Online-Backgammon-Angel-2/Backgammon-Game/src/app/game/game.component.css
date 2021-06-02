@@ -1,0 +1,60 @@
+main {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0px;
+    justify-content: center;
+    align-items: center;
+
+}
+  
+app-game-board {
+    border: 1px gray solid;
+    height: 200px;
+    width: 200px;
+    
+}
+.background {
+    width: 100%;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.content{
+    font-size: 5vh;
+    color: indigo;
+}
+
+input{
+    padding: 0.5vh;
+    margin: 1vh;
+}
+
+button{
+    padding: 1vh;
+}
+/* .flot{
+    padding: 10vh;
+} */
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:  1vh;
+}
+.grid>div{
+    text-align: center;
+    padding: 10vh 0;
+}
+.flot2{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#chat{
+    border: 2px solid black;
+    width: 50vh;
+    height: 50vh;
+    overflow: scroll;
+}
+#message{
+    width: 40vh;
+}

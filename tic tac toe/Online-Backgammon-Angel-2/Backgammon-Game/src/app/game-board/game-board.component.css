@@ -1,0 +1,40 @@
+   .grid-container {
+    display: grid;
+    /* grid-template-areas: 'myArea myArea . . .' 'myArea myArea . . .'; */
+    grid-template-columns: repeat(13, [col] 1fr);
+    grid-template-rows: repeat(2, [row] auto);
+    grid-gap: 2vh;
+    /* align-items: center; */
+    background-color: #1a920a;
+    background-image: url("/assets/images/backgammon.png");
+    background-position: center; /*Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /* background-size: cover; Resize the background image to cover the entire container */
+    padding: 2vh;
+    height: 90vh;
+    /* height:min-content; */
+  }
+   
+  .grid-container > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width:6vw ;
+  }
+  
+  img{
+      height: 6vh;
+  }
+
+  .grid-container >.up{
+    align-items: flex-start;
+  }
+
+  .grid-container > div >.down{
+    align-items: flex-end;
+  }
+
+  /*.middle_board{
+     background-color: brown !important;
+  } */

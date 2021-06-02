@@ -1,0 +1,12 @@
+<div class="background">
+    <div class="content">
+        <h1>TIC TAC TOE</h1>
+        <h3>welcome to the game</h3>
+        <h3>are you ready to play ?</h3>
+
+        <input placeholder="user name" type="text" #name>
+        <input placeholder="passord" type="password" #pass><br>
+        <button (click)=login(name.value,pass.value)>sign in</button><br>
+        <p>dont have an account ? <a routerLink="/signUp" >sign up now</a></p>
+    </div>
+</div>

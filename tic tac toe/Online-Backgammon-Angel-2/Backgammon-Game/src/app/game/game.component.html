@@ -1,0 +1,25 @@
+<div class="background">
+  <div class="content">
+    <h1>current player:{{player}}</h1>
+    <button style="background-color: rgb(78, 78, 255);border-radius: 20vh;" *ngIf="winner" (click)="emitNewGame()">start new game</button>
+    <button style="background-color: darkgoldenrod; border-radius: 20vh;" (click)="emitQuitGame()">quit game</button>
+
+    <h2 *ngIf="winner">{{winner}} </h2>
+    <div class="grid">
+    <div class="flot1">
+      <div *ngFor="let item of messageArr">
+        <span><strong>{{item.sender}} : </strong>{{item.mrssage}}</span>
+    </div>    
+      <!-- <div id='chat' #chat></div><br> -->
+      <input #message id="message" placeholder="Enter message">
+      <button style="border-radius: 20vh;" (click)=sendMessage()>submit</button> <br>
+    </div>
+  <div>
+    <main class="flot2">
+      <app-game-board *ngFor="let val of squares; let i =index" [value]="val" (click)="emitMove(i)"></app-game-board>
+    </main>
+  </div>
+</div>
+
+  </div>
+</div>

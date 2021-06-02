@@ -1,0 +1,17 @@
+<div class="background">
+  <div class="content">
+<div>
+  <h1>game lobby</h1>
+  <div style="color: green;">online user</div>
+      <button id="join" routerLink="/game" routerLinkActive="active" *ngIf="join" (click)=emitJoinGame(data)>join game with {{data.sender}}</button>
+      <button id="decline" *ngIf="join" (click)="emitDecline(data)">decline</button>
+      <button id="cancel" *ngIf="invtSent" (click)='emitCancel()'>Cancel invite</button>
+  </div>
+  <div>
+    <li *ngFor="let user of userNamelist; index as i; first as isFirst">
+      <button id='{{i}}' (click)="emitInvite(user)"> send {{user}} - game invite </button>
+    </li>
+  </div>
+  <button id="logout" (click)=logOut()>log out</button>
+</div>
+</div>
